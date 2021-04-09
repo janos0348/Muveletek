@@ -27,21 +27,262 @@ public class Muveletek extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        btnUjfeladat = new javax.swing.JButton();
+        btnMegold = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblVisszajelzes = new javax.swing.JLabel();
+        txtValasz = new javax.swing.JTextField();
+        btnEllenorzes = new javax.swing.JButton();
+        lblFeladat = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        lblKivonas = new javax.swing.JLabel();
+        lblSzorzas2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblOsztas2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        lblOszeadas = new javax.swing.JLabel();
+        lblOsszeadas = new javax.swing.JLabel();
+        lblKivonas2 = new javax.swing.JLabel();
+        lblEredmeny = new javax.swing.JLabel();
+        lblSzorzas = new javax.swing.JLabel();
+        lblOsztas = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mnuMuveletek = new javax.swing.JMenu();
+        mnuKivonas = new javax.swing.JRadioButtonMenuItem();
+        mnuOsszeadas = new javax.swing.JRadioButtonMenuItem();
+        mnuSzorzas = new javax.swing.JRadioButtonMenuItem();
+        mnuOsztas = new javax.swing.JRadioButtonMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnUjfeladat.setText("Új feladat");
+
+        btnMegold.setText("Megoldás");
+        btnMegold.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMegoldActionPerformed(evt);
+            }
+        });
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Gyakorlás"));
+
+        lblVisszajelzes.setText("Visszajelzés");
+
+        btnEllenorzes.setText("Ellenőrzés");
+        btnEllenorzes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEllenorzesActionPerformed(evt);
+            }
+        });
+
+        lblFeladat.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblFeladat, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtValasz, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnEllenorzes)
+                        .addGap(16, 16, 16))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblVisszajelzes, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtValasz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEllenorzes))
+                    .addComponent(lblFeladat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblVisszajelzes, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Statisztika"));
+
+        lblKivonas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblKivonas.setText("Kivonás: 0");
+
+        lblSzorzas2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblSzorzas2.setText("Szorzás: 0");
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText("Össz kérdések száma:");
+
+        lblOsztas2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOsztas2.setText("Osztás: 0");
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel7.setText("Össz próbálkozások száma:");
+
+        lblOszeadas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOszeadas.setText("Összeadás: 0");
+
+        lblOsszeadas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOsszeadas.setText("Összeadás: 0");
+
+        lblKivonas2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblKivonas2.setText("Kivonás: 0");
+
+        lblEredmeny.setText("Eredmény: 0%");
+
+        lblSzorzas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblSzorzas.setText("Szorzás: 0");
+
+        lblOsztas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOsztas.setText("Osztás: 0");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblKivonas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblOsztas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblSzorzas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblOszeadas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblOsszeadas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblKivonas2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblOsztas2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSzorzas2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(lblEredmeny)))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(21, 21, 21)
+                        .addComponent(lblOszeadas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblKivonas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblOsztas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblSzorzas))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(21, 21, 21)
+                        .addComponent(lblOsszeadas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblKivonas2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblOsztas2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblSzorzas2)))
+                .addGap(30, 30, 30)
+                .addComponent(lblEredmeny)
+                .addContainerGap())
+        );
+
+        jMenu1.setText("Fájl");
+        jMenuBar1.add(jMenu1);
+
+        mnuMuveletek.setText("Muveletek");
+
+        buttonGroup1.add(mnuKivonas);
+        mnuKivonas.setSelected(true);
+        mnuKivonas.setText("Kivonás");
+        mnuMuveletek.add(mnuKivonas);
+
+        buttonGroup1.add(mnuOsszeadas);
+        mnuOsszeadas.setText("Összeadás");
+        mnuMuveletek.add(mnuOsszeadas);
+
+        buttonGroup1.add(mnuSzorzas);
+        mnuSzorzas.setText("Szorzás");
+        mnuMuveletek.add(mnuSzorzas);
+
+        buttonGroup1.add(mnuOsztas);
+        mnuOsztas.setText("Osztás");
+        mnuOsztas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuOsztasActionPerformed(evt);
+            }
+        });
+        mnuMuveletek.add(mnuOsztas);
+
+        jMenuBar1.add(mnuMuveletek);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnMegold)
+                            .addComponent(btnUjfeladat))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnUjfeladat)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMegold))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuOsztasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuOsztasActionPerformed
+        lblFeladat.setText("6 / 2 = ");
+    }//GEN-LAST:event_mnuOsztasActionPerformed
+
+    private void btnMegoldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMegoldActionPerformed
+        txtValasz.setText("6");
+    }//GEN-LAST:event_btnMegoldActionPerformed
+
+    private void btnEllenorzesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEllenorzesActionPerformed
+        if(txtValasz.getText().equals("6")){
+            lblVisszajelzes.setText("6 jó!");
+            
+        }else{
+            lblVisszajelzes.setText("Rossz Válasz");
+        }
+        btnEllenorzes.setEnabled(false);
+    }//GEN-LAST:event_btnEllenorzesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +320,32 @@ public class Muveletek extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEllenorzes;
+    private javax.swing.JButton btnMegold;
+    private javax.swing.JButton btnUjfeladat;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblEredmeny;
+    private javax.swing.JLabel lblFeladat;
+    private javax.swing.JLabel lblKivonas;
+    private javax.swing.JLabel lblKivonas2;
+    private javax.swing.JLabel lblOsszeadas;
+    private javax.swing.JLabel lblOszeadas;
+    private javax.swing.JLabel lblOsztas;
+    private javax.swing.JLabel lblOsztas2;
+    private javax.swing.JLabel lblSzorzas;
+    private javax.swing.JLabel lblSzorzas2;
+    private javax.swing.JLabel lblVisszajelzes;
+    private javax.swing.JRadioButtonMenuItem mnuKivonas;
+    private javax.swing.JMenu mnuMuveletek;
+    private javax.swing.JRadioButtonMenuItem mnuOsszeadas;
+    private javax.swing.JRadioButtonMenuItem mnuOsztas;
+    private javax.swing.JRadioButtonMenuItem mnuSzorzas;
+    private javax.swing.JTextField txtValasz;
     // End of variables declaration//GEN-END:variables
 }
